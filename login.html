@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regrow_RPL</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+   <div class="container">
+       <header>
+            <img src="images/logo.svg" alt="regrow logo" class="logo"> 
+       </header>
+    </div>
+
+    <div class="container2">
+        <form action="proseslogin.php" method="POST"> <!-- masih bingung proses login gimana. -->
+            <div>
+                <input type="text" name="uname" required="">
+                <label>Username</label>
+            </div>
+            <div>
+                <input type="password" name="pass" required="">
+                <label>Password</label>
+            </div>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label> <!-- masih bingung proses remember me gimana. -->
+
+            <button type="submit" value="sign_in" name="sign_in"><a>Sign in</a></button> 
+        </form>
+    </div>
+
+    <div class="container3">
+        <p href="#" class="forgot"><a>Forgot your password?</a></p>
+
+        <div class="garis"></div>
+
+        <p class="gada">Don't have an account?</p>
+    </div>
+
+    <div class="container4">
+        <button><a href="register.html" class="signup">Sign Up</a></button>
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("nav").style.width = "200px";
+        }
+        
+        function closeNav() {
+          document.getElementById("nav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass:400,600');
+
+body {
+    margin: 0;
+    font-family: 'Overpass', sans-serif;
+    background-color: #1B213B;
+}
+
+.container {
+    text-align: center;
+    padding: .5em;
+    margin-top: .6em;
+}
+
+.logo {
+    width: 130px;
+    align-content: center;
+}
+
+.container2, .container4{
+    margin: .8em 1.8em;
+}
+
+.container2 label {
+    color: white;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    border-radius: .8em;
+    padding: .8em 1.2em;
+    margin-top: .6em;
+    margin-bottom: 2em;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
+
+.container2 form div {
+    position: relative;
+}
+
+.container2 form div label {
+    position: absolute;
+    color: #999;
+    top: 1.2em;
+    left: .5em;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.container2 input:focus ~ label, .container2 input:valid ~ label {
+    top: -12px;
+    left: 0;
+    color: #1BD688;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.container2 input:focus, .container2 input:valid {
+    border: 2px solid #1BD688;
+}
+
+.container2 button {
+    background-color: #1BD688;
+    margin: .4em auto;
+    border-radius: .8em;
+    padding: .5em 1.2em;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container2 button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.container2 button:hover {
+    opacity: 0.8;
+}
+
+.forgot {
+    color: #1BD688;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 auto .5em;
+}
+
+.forgot:hover {
+    opacity: 0.8;
+}
+
+.garis{
+    width: calc(100%-1em);
+    height: 2px;
+    margin: 1.2em 1.8em;
+    background-color: black;
+    opacity: 25%;
+}
+
+.gada{
+    color: white;
+    margin: .5em auto;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.container4 button{
+    position: relative;
+    background-color: #1BD688;
+    margin: .4em auto;
+    border-radius: .8em;
+    padding: .5em 1.2em;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container4 a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.container4:hover{
+    opacity: 0.8;
+}
+
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+
+    .container2, .container4 {
+        margin: .8em 5.5em;
+    }
+
+    .garis{
+        margin: 1.2em 5.5em;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px){
+
+    .container2, .container4 {
+        margin: .8em 14.5em;
+    }
+
+    .garis{
+        margin: 1.2em 14.5em;
+    }
+    
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px){
+
+    .container2, .container4 {
+        margin: .8em 20.5em;
+    }
+
+    .garis{
+        margin: 1.2em 20.5em;
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+
+    .container2, .container4 {
+        margin: .8em 28em;
+    }
+
+    .garis{
+        margin: 1.2em 28em;
+    }
+
+}

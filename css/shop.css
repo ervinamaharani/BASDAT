@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass:400,600');
+
+body {
+    margin: 0;
+    font-family: 'Overpass', sans-serif;
+    background-color: #1B213B;
+}
+
+h1 {
+    color: #1BD688;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: .5em;
+}
+
+.logo {
+    width: 100px;
+}
+
+header {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.ham {
+    width: 22px;
+    margin-top: 20%;
+}
+
+.sidenav{
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 10; 
+    top: 0; 
+    right: 0;
+    background-color: rgba(0,0,0,0.8); 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+}
+  
+.sidenav a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}  
+
+.sidenav a:hover {
+    color: #1BD688;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.closebtn img {
+    margin-bottom: 1.2em;
+    margin-top: 0;
+    text-align: right;
+    padding: .5em;
+    width: 15px;
+    cursor: pointer;
+}
+
+.closebtn:hover{
+    color: #1BD688;
+}
+
+.cari {
+    width: 30px;
+}
+
+.judul h2 {
+    color: white;
+    font-weight: bold;
+    margin: 3em 4.5em .4em;
+}
+
+.container2 {
+    margin: 1.6em auto 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+}
+
+.glider-contain{
+    width: 45%;
+    margin: 0 1.2em 0 7em;
+} 
+
+.glider .gambar img {
+    width: 460px;
+    height: 220px;
+    border-radius: .8em ;
+}
+
+.sellProduct {
+    width: 55%;
+}
+
+.sellProduct h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 1.6rem;
+}
+
+.sellProduct .sell {
+    margin-top: .7em;
+}
+
+.sellProduct .sell2 {
+    margin-bottom: 1.2em;
+}
+
+.sellProduct a {
+    position: relative;
+    background-color: #1BD688;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin: .4em auto;
+    border-radius: .8em;
+    padding: 1em 6em;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.judul2 h2 {
+    color: white;
+    font-weight: bold;
+    margin: 4em 4.5em .2em;
+}
+
+.judul3 h2 {
+    color: white;
+    font-weight: bold;
+    margin: 4em 4.5em .2em;
+}
+
+.judul4 h2 {
+    color: white;
+    font-weight: bold;
+    margin: 4em 4.5em .2em;
+}
+
+.container3, .container4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .8em auto 4em;
+}
+
+.container5 .contain{
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    justify-content: center;
+    align-items: center;
+}
+
+.multiple{
+    width: 85%;
+    margin: 0 auto;
+} 
+
+.glider2 .card, .glider3 .card {
+    width: 260px;
+    margin: 1.2em;
+    padding: 1.2em;
+    background: rgb(38, 47, 83);
+    border-radius: .8em;
+    box-shadow:
+        6px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container5 .card {
+    width: 160px;
+    margin: 1.2em;
+    padding: 1em;
+    background: rgb(38, 47, 83);
+    border-radius: .8em;
+    box-shadow:
+        6px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.glider2 .card .gambar, .glider3 .card .gambar, .container5 .card .gambar {
+    position: relative;
+    text-align: center;
+}
+
+.glider2 .card .gambar img, .glider3 .card .gambar img {
+    border-radius: .8em;
+    width: 180px;
+    height: 120px;
+    color: #1BD688;
+}
+
+.container5 .card .gambar img {
+    border-radius: .8em;
+    width: 160px;
+    height: 120px;
+    color: #1BD688;
+}
+
+.glider2 .card .content, .glider3 .card .content, .container5 .card .content {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.glider2 .card .content h2, .glider3 .card .content h2, .container5 .card .content h2 {
+    color: #1BD688;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.glider2 .card .content h3, .glider3 .card .content h3, .container5 .card .content h3 {
+    color: rgba(255, 255, 255, 0.8);
+    margin: .5em;
+}
+
+.glider2 .card:hover, .glider3 .card:hover, .container5 .card:hover{
+    scale: 1.1;
+}
+
+.glider2 .card .content a:hover, .glider3 .card .content a:hover, .container5 .card .content .a:hover {
+    opacity: 0.8;
+}
+
+
+.glider-next{
+    position: absolute;
+    right: 110px;
+    top: 45%
+}
+
+.glider-prev{
+    position: absolute;
+    left: 0;
+    top: 45%
+}
+
+#dots {
+   position: absolute;
+   left: 170px;
+}
+
+
+@media only screen and (min-width: 1200px){
+
+    .logo {
+        width: 130px;
+        padding-left: 1.2em;
+    }
+    
+    .sidenav {
+        width: auto;
+        height: auto;
+        position: relative;
+        background: none; 
+        overflow: inherit; 
+        padding: .2em .8em 0;
+        transition: none; 
+    }
+
+    .sidenav li {
+        float: left;
+        margin: .3em 1em;
+    }
+
+    .sidenav a{
+        color: white;
+        background-color: inherit;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .sidenav .closebtn {
+        display: none;
+    }
+
+    .ham {
+        display: none;
+    }
+}
