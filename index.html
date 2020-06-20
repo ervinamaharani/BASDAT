@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regrow_RPL</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+   <div class="container">
+       <header>
+            <img src="images/logo.svg" alt="regrow logo" class="logo">
+
+            <nav>
+            <span style="cursor:pointer" class="ham" onclick="openNav()"><img src="images/ham.svg" alt="bar"></span>
+
+                <ul class="sidenav" id="nav">
+                    <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/exit.svg" alt="exit"></a></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="shop.html">shop</a></li>
+                    <li><a href="register.html">register</a></li>
+                    <li><a href="login.html">login</a></li>
+                </ul>
+            </nav>
+       </header>
+   
+       <section>
+        <img src="images/Group2.svg" alt="illustrasion" class="ilustrasi">
+            <div class="sign">
+                <button class="but1"><a href="register.html">Sign up</a></button>
+                <button class="but2"><a href="login.html">Sign in</a></button>
+            </div>
+
+           <div class="start">
+                <h1>Reduce Reuse Recycle</h1>
+                <p class="sub-header"> Aplikasi web yang kami buat bertujuan untuk menjadi media informasi untuk pemahaman dan penerapan tindakan 3R untuk limbah yang ingin diketahui pengguna.</p>
+                <a href="#" class="aboutUs">About Us</a>
+           </div>
+
+           <p class="scroll2">scroll</p>
+            <img src="images/scroll.svg" alt="scrolling" class="scroll">
+       </section>
+    </div>
+
+    <div class="container2">
+       <section>
+            <div class="start2">
+                <h1>What do you want to know?</h1>
+                <p class="sub-header"> Di sini kami menyediakan artikel dan video tentang kertas, plastik, dan sampah organik. Jika Anda ingin melihat artikel-artikel ini, silakan pilih salah satu dari 3 di bawah ini</p>
+            </div>
+
+            <div class="art-container">
+                <div class="card">
+                    <div class="gambar">
+                        <a href="3R_Kertas.html">
+                            <img src="images/iconkertas.svg" alt="kertas" class="icon">
+                        </a>
+                    </div>
+                    <div class="content">
+                        <h1>Paper</h1>
+                        <p>Di Indonesia sendiri rata-rata setiap individu mengkonsumsi 27kg kertas per tahun.</p>  
+                    </div>
+                </div>   
+                <div class="card">
+                    <div class="gambar">
+                        <a href="3R_Plastik.html">
+                            <img src="images/iconplastic.svg" alt="plastic" class="icon">
+                        </a>
+                    </div>
+                    <div class="content">
+                        <h1>Plastic</h1>
+                        <p>Setiap 20 menit, setara dengan 10 ton truk muatan plastik dibuang ke perairan di sekitar Indonesia.</p>
+                    </div>
+                </div>   
+                <div class="card">
+                    <div class="gambar">
+                        <a href="3R_Organik.html">
+                            <img src="images/iconorganik.svg" alt="organik" class="icon">
+                        </a>
+                    </div>
+                    <div class="content">
+                        <h1>Organic</h1>
+                        <p>Indonesia diperkirakan menghasilkan > 190.000 ton sampah per hari, yang sebagian besar organik.
+                        </p>
+                    </div>
+                </div>   
+            </div>
+       </section>
+    </div>
+
+    <div class="container3">
+        <div class="card">
+            <img src="images/vectorShop.svg" alt="belanja">
+            <div class="desc">
+                <h3>Want to <span>Buy</span> Something?</h3>
+                <p>Di sini, kami menawarkan berbagai jenis produk yang membantu Anda mengurangi limbah plastik</p>
+                <button><a href="shop.html">Click here</a></button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/vectorSell.svg" alt="belanja">
+            <div class="desc">
+                <h3>Want to <span>Sell</span> Your Product?</h3>
+                <p>Di sini, kami membantu Anda menjual dan memperkenalkan produk ramah lingkungan Anda kepada para pengguna</p>
+                <button><a href="sell.html">Click here</a></button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/vectorRead.svg" alt="belanja">
+            <div class="desc">
+                <h3>Want to <span>Learn</span> about waste?</h3>
+                <p>Di sini, kami memberi Anda banyak informasi, artikel, dan bahkan video tentang pengelolaan limbah</p>
+                <button><a href="3R_Kertas.html">Click here</a></button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("nav").style.width = "50%";
+        }
+        
+        function closeNav() {
+          document.getElementById("nav").style.width = "0";
+        }
+    </script>
+</body>
+</html>

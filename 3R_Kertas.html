@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regrow_RPL</title>
+    <link rel="stylesheet" href="css/3R_Kertas.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+         <img src="images/logo.svg" alt="regrow logo" class="logo"> 
+         <nav>
+             <span style="cursor:pointer" class="ham" onclick="openNav()"><img src="images/ham.svg" alt="bar"></span>
+ 
+                 <ul class="sidenav" id="nav">
+                     <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/exit.svg" alt="exit"></a></li>
+                     <li><a href="index.html">home</a></li>
+                     <li><a href="shop.html">shop</a></li>
+                     <li><a href="register.html">register</a></li>
+                     <li><a href="login.html">login</a></li>
+                 </ul>
+         </nav>
+        </header>
+   </div>
+
+   <div class="container2">
+    <h1><span>P</span>aper</h1>
+      
+       <div class="art-container">
+        <div class="card">
+            <div class="gambar">
+                <img src="images/recycle.svg">
+            </div>
+            <div class="content">
+                <h2>Reduce</h2>
+                <p>Reduce kertas berarti mengurangi penggunaan kertas. 
+                    Di zaman modern ini mengurangi penggunaan kertas sudah...
+                </p>
+
+                <a href="reduceKertas.html"><span>Read More</span></a>
+            </div>
+        </div>   
+        <div class="card">
+            <div class="gambar">
+                <img src="images/recycle.svg">
+            </div>
+            <div class="content">
+                <h2>Reuse</h2>
+                <p>Reuse kertas berarti memakai ulang kertas. Kertas dapat dipakai ulang 
+                    untuk mengurangi penggunaan kertas...</p>
+
+                <a href="reuseKertas.html"><span>Read More</span></a>
+            </div>
+        </div>   
+        <div class="card">
+            <div class="gambar">
+                <img src="images/recycle.svg">
+            </div>
+            <div class="content">
+                <h2>Recycle</h2>
+                <p>Recycle kertas berarti mendaur ulang kertas yang sudah tidak dapat 
+                    dipakai sehingga dapat dipakai kembali...
+                </p>
+
+                <a href="recycleKertas.html"><span>Read More</span></a>
+            </div>
+        </div>   
+       </div>
+
+       <div class="back">
+           <a href="index.html">Go back</a>
+       </div>
+
+       <script>
+        function openNav() {
+          document.getElementById("nav").style.width = "200px";
+        }
+        
+        function closeNav() {
+          document.getElementById("nav").style.width = "0";
+        }
+       </script>
+</body>
+</html>

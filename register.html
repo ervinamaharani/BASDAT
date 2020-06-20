@@ -1,0 +1,63 @@
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regrow_RPL</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <div class="container">
+       <header>
+            <img src="images/logo.svg" alt="regrow logo" class="logo"> 
+       </header>
+    </div>
+
+    <div class="container2">
+        <form action="simpanregister.php" method="POST">
+            <div>
+                <input type="text" name="Username" required>
+                <label>Username</label>
+            </div>
+            <div>
+                <input type="email" name="Email" required>
+                <label>Email</label>
+            </div>
+            <div>
+                <input type="password" name="Password" required>
+                <label>Password</label>
+            </div>
+            <div>
+                <input type="tel" name="Nomor_Telepon" required>
+                <label>Phone number</label>
+            </div>
+            <div>
+                <input type="text" name="Alamat" required>
+                <label>Address</label>
+            </div>
+            <!-- beberapa name input ada yang diubah menyesuaikan db -->
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis omnis mollitia quo, repellat corrupti laudantium!</p>
+            
+            <button type="submit"><a href="index.html">Daftar</a></button>
+        </form>
+    </div>
+
+    <div class="container3">
+        <p>Sudah punya akun?<a href="login.html">masuk</a></p>
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("nav").style.width = "200px";
+        }
+        
+        function closeNav() {
+          document.getElementById("nav").style.width = "0";
+        }
+    </script>
+</body>
+</html>
