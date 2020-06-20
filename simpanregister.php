@@ -25,6 +25,6 @@ header('Location: login.html?status=sukses');
 }
 else ///jika gagal
 {
-echo "<div class='alert alert-danger'> Registrasi gagal.</div>";
+header('Location: register.html?status=gagal');
 }
 ?>
