@@ -3,6 +3,18 @@
 <head>
     <!-- Load file CSS Bootstrap offline -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        h4{
+            color: white;
+        }
+        th{ 
+            color: white;
+        }
+        td{
+            color: white;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -74,6 +86,7 @@
     </table>
     
     <a href="sell.php" class="btn btn-primary" role="button">Tambah Data</a>
+
 
 </div>
 </body>
