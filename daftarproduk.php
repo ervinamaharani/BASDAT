@@ -1,13 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regrow_RPL</title>
     <!-- Load file CSS Bootstrap offline -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
+<style>
+        h2{
+            color: white;
+        }
+        th{ 
+            color: white;
+        }
+        td{
+            color: white;
+        }
+    </style>
+
+<body>
+   <div class="container">
+       <header>
+            <img src="images/logo.svg" alt="regrow logo" class="logo">
+
+            <nav>
+            <span style="cursor:pointer" class="ham" onclick="openNav()"><img src="images/ham.svg" alt="bar"></span>
+
+                <ul class="sidenav" id="nav">
+                    <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/exit.svg" alt="exit"></a></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="shop.html">shop</a></li>
+                    <li><a href="register.html">register</a></li>
+                    <li><a href="login.html">login</a></li>
+                </ul>
+            </nav>
+       </header>
+
 <body>
 <div class="container">
     <br>
-    <h4>Data Produk</h4>
+    <h2>Data Produk</h2>
 <?php
 
     include "kon.php";
@@ -40,7 +76,7 @@
             <th>Nama Produk</th>
             <th>Harga Produk</th>
             <th>Foto Produk</th>
-            <th>Deskripdi</th>
+            <th>Deskripsi</th>
             <th colspan='2'>Aksi</th>
 
         </tr>
@@ -72,8 +108,18 @@
         }
         ?>
     </table>
-    
+
     <a href="sell.php" class="btn btn-primary" role="button">Tambah Data</a>
+
+    <script>
+        function openNav() {
+          document.getElementById("nav").style.width = "50%";
+        }
+        
+        function closeNav() {
+          document.getElementById("nav").style.width = "0";
+        }
+    </script>
 
 </div>
 </body>
