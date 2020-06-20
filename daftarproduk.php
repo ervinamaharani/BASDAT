@@ -8,8 +8,7 @@
     <!-- Load file CSS Bootstrap offline -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-<<<<<<< HEAD
-=======
+
     <style>
         h4{
             color: white;
@@ -21,7 +20,6 @@
             color: white;
         }
     </style>
->>>>>>> 644dd0e72ec59e95e644cf08982faa5d304efdab
 </head>
 
 <style>
@@ -125,7 +123,6 @@
 
     <a href="sell.php" class="btn btn-primary" role="button">Tambah Data</a>
 
-<<<<<<< HEAD
     <script>
         function openNav() {
           document.getElementById("nav").style.width = "50%";
@@ -135,8 +132,6 @@
           document.getElementById("nav").style.width = "0";
         }
     </script>
-=======
->>>>>>> 644dd0e72ec59e95e644cf08982faa5d304efdab
 
 </div>
 </body>
