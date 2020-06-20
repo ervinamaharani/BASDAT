@@ -1,71 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Update Produk</title>
-    <!-- Load file CSS Bootstrap offline -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
-</head>
-<body>
-<div class="container">
-    <?php
-
-    //Include file koneksi, untuk koneksikan ke database
-    include "kon.php";
-
-    //Fungsi untuk mencegah inputan karakter yang tidak sesuai
-    function input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-    //Cek apakah ada nilai yang dikirim menggunakan methos GET dengan nama id_anggota
-    if (isset($_GET['Kode_Produk'])) {
-        $id=input($_GET["Kode_Produk"]);
-
-        $sql="select * from produk where Kode_Produk=$id";
-        $hasil=mysqli_query($con,$sql);
-        $data = mysqli_fetch_assoc($hasil);
-    }
-
-    //Cek apakah ada kiriman form dari method post
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-        $nama=input($_POST["name"]);
-        $deskripsi=input($_POST["Description"]);
-        $harga=input($_POST["price"]);
-        $foto=input($_POST["fotoproduk"]);
-
-        //Query update data pada tabel anggota
-        $sql="update produk set
-			Nama_Produk='$nama',
-			Deskripsi_Produk='$deskripsi',
-			Harga_Produk='$harga',
-			Foto_Produk='$foto',
-			where Kode_Produk=$id";
-
-        //Mengeksekusi atau menjalankan query diatas
-        $hasil=mysqli_query($con,$sql);
-
-        //Kondisi apakah berhasil atau tidak dalam mengeksekusi query diatas
-        if ($hasil) {
-            header("Location:daftarproduk.php");
-        }
-        else {
-            echo "<div class='alert alert-danger'> Data Gagal diupdate.</div>";
-
-        }
-
-    }
-
-    ?>
-    <?php
-
-include "simpanproduk.php"
-
-?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -90,30 +23,91 @@ include "simpanproduk.php"
          </nav>
         </header>
    </div>
+</body>
 
-   <div class="container2">
+<div class="container2">
+<?php
+
+    //Include file koneksi, untuk koneksikan ke database
+    include "kon.php";
+
+    //Fungsi untuk mencegah inputan karakter yang tidak sesuai
+    function input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+    //Cek apakah ada nilai yang dikirim menggunakan methos GET dengan nama Kode_Produk
+    if (isset($_GET['Kode_Produk'])) {
+        $id=input($_GET["Kode_Produk"]);
+
+        $sql="select * from produk where Kode_Produk=$id";
+        $hasil=mysqli_query($con,$sql);
+        $data = mysqli_fetch_assoc($hasil);
+    }
+    //Cek apakah ada kiriman form dari method post
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        $id=htmlspecialchars($_POST["Kode_Produk"]);
+        $nama=input($_POST["name"]);
+        $deskripsi=input($_POST["Description"]);
+        $harga=input($_POST["price"]);
+        $foto = $_FILES['foto_produk']['name'];
+
+        $target = 'namafolder/' . $foto;
+
+        if(move_uploaded_file($_FILES['foto_produk']['tmp_name'], $target)){
+        //Query update data pada tabel anggota
+        $sql="update produk set
+			Nama_Produk='$nama',
+			Deskripsi_Produk='$deskripsi',
+			Harga_Produk='$harga',
+			Foto_Produk='$foto'
+			where Kode_Produk=$id";
+
+        //Mengeksekusi atau menjalankan query diatas
+        $hasil =mysqli_query($con,$sql);
+
+        //Kondisi apakah berhasil atau tidak dalam mengeksekusi query diatas
+        if ($hasil) {
+            header("Location:daftarproduk.php");
+        }
+        else {
+            echo "<div class='alert alert-danger'> Data Gagal diupdate.</div>";
+
+        }
+
+        }
+    }
+    ?>
+
+
    <h1><span>S</span>ell</h1>
 
-    <form action="sell.php" method="POST" enctype="multipart/form-data">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
       <div id="dropzone">
         <h1>Drag n Drop Photo</h1>
-        <input type="file" id="fotoproduk" name="fotoproduk" >
+        <input type="file" id="foto_produk" name="foto_produk" value = "<?php if(isset($data['Foto_Produk'])) echo $data['Foto_Produk'];?>">
     </div>
     <h1 id="error"></h1><br></br>
     <h1 id="progress"></h1><br></br>
     <div id="files"></div>
         <div>
             <label>What's your product name?</label>
-            <input type="text" name="name" required>
+            <input type="text" name="name"  value= "<?php if(isset($data['Nama_Produk'])) echo $data['Nama_Produk'];?>" required/> 
         </div>
         <div>
             <label>Description of your product</label>
-            <textarea name="Description"></textarea>
+            <textarea name="Description"  > <?php if(isset($data['Deskripsi_Produk'])) echo $data['Deskripsi_Produk'];?> </textarea>
         </div>
         <div>
             <label>What's the price for your product</label>
-            <input type="text" name="price" required>
+            <input type="text" name="price" value="<?php if(isset($data['Harga_Produk'])) echo $data['Harga_Produk'];?>" required/>
         </div>
+
+        <input type="hidden" name="Kode_Produk" value="<?php if(isset($data['Kode_Produk'])) echo $data['Kode_Produk'];?>" />
+
         <div>
             <button type="submit" name="foto_produk">Submit</button>
         </div>
@@ -139,7 +133,7 @@ include "simpanproduk.php"
            var files = $("#files");
 
            $("#fileupload").fileupload({
-               url: "sell.html",
+               url: "update.php",
                dropzone: "#dropzone",
                datatype: "json",
                autoupload: false
