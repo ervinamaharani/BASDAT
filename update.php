@@ -64,7 +64,7 @@
 			Deskripsi_Produk='$deskripsi',
 			Harga_Produk='$harga',
 			Foto_Produk='$foto'
-			where Kode_Produk=$id";
+			where Kode_Produk='$id'";
 
         //Mengeksekusi atau menjalankan query diatas
         $hasil =mysqli_query($con,$sql);

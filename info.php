@@ -54,71 +54,41 @@
 <body>
 <div class="container">
     <br>
-    <h2>Data Produk</h2>
+    <h2>Hubungi Penjual</h2>
 <?php
 
     include "kon.php";
 
-    //Cek apakah ada nilai dari method GET dengan nama id_anggota
-    if (isset($_GET['Kode_Produk'])) {
-        $id=htmlspecialchars($_GET["Kode_Produk"]);
-
-        $sql="delete from produk where Kode_Produk='$id' ";
-        $hasil=mysqli_query($con,$sql);
-
-        //Kondisi apakah berhasil atau tidak
-            if ($hasil) {
-                header("Location:daftarproduk.php");
-
-            }
-            else {
-                echo "<div class='alert alert-danger'> Produk Gagal dihapus.</div>";
-
-            }
-        }
 ?>
 
-
-    <table class="table table-bordered table-hover">
-        <br>
-        <thead>
-        <tr>
-            <th>Kode Produk</th>
-            <th>Nama Produk</th>
-            <th>Harga Produk</th>
-            <th>Foto Produk</th>
-            <th>Deskripsi</th>
-            <th colspan='2'>Action</th>
-
-        </tr>
-        </thead>
+	
         <?php
         include "kon.php";
-        $sql="select * from produk order by Kode_Produk desc";
+        $sql="select * from pengguna WHERE UserID='2'";
 
         $hasil=mysqli_query($con,$sql);
         while ($data = mysqli_fetch_array($hasil)) {
 
             ?>
-            <tbody>
-            <tr>
-                <td><?php echo $data["Kode_Produk"]; ?></td>
-                <td><?php echo $data["Nama_Produk"];   ?></td>
-                <td><?php echo $data["Harga_Produk"];   ?></td>
-                <td><?php echo "<img src='namafolder/$data[Foto_Produk]' width='90' height='70'/>";   ?></td>
-                <td><?php echo $data["Deskripsi_Produk"];   ?></td>
-                <td>
-                    <a href="update.php?Kode_Produk=<?php echo htmlspecialchars($data['Kode_Produk']); ?>" class="btn btn-warning" role="button">Update</a>
-                    <a href="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>?Kode_Produk=<?php echo $data['Kode_Produk']; ?>" class="btn btn-danger" role="button">Delete</a>
-                </td>
-            </tr>
-            </tbody>
+        <div class="card mb-3" style="max-width: 500px;">
+		  <div class="row no-gutters">
+		    <div class="col-md-4">
+		      <img src="namafolder/User.png" class="card-img">
+		    </div>
+		    <div class="col-md-8">
+		      <div class="card-body">
+		        <h5 class="card-title"><?=$data['Username'];?> </h5>
+		        <p class="card-text"> <?=$data['Email'];?></p>
+		        <p class="card-text"><?=$data['Nomor_Telepon'];?></p>
+		        <p class="card-text"><small class="text-muted"><?=$data['Alamat'];?></small></p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
             <?php
         }
         ?>
-    </table>
-
-    <a href="sell.php" class="btn btn-primary" role="button">Tambah Data</a>
 
     <script>
         function openNav() {
